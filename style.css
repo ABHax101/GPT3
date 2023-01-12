@@ -1,0 +1,28 @@
+#question-form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#question-form label {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#question-input {
+    font-size: 1.5em;
+    padding: 5px;
+    width: 80%;
+}
+
+#response {
+    width: 500px;
+    margin: 50px auto;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#question-form, #response {
+    display: flex;
+    flex-direction: column;
+}
