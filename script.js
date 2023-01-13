@@ -24,7 +24,7 @@ form.addEventListener("submit", async (e) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization: Bearer "+String(apiKey)
+                "Authorization": "Bearer "+String(apiKey)
             },
             body: JSON.stringify(data)
         });
