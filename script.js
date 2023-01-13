@@ -33,7 +33,7 @@ form.addEventListener("submit", async (e) => {
         // Extract the response text from the JSON object
         const responseText = json.choices[0].text;
         // Display the response text
-        responseDiv.textContent = responseText;
+        responseDiv.textContent = json;
     } catch (err) {
         document.write(err);
     }
