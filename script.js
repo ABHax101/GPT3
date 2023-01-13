@@ -16,7 +16,8 @@ form.addEventListener("submit", async (e) => {
     // Data to send to the API
     const data = {
         model: "text-davinci-003",
-        prompt: question
+        prompt: question,
+        max_tokens: 1000
     };
 
     try {
