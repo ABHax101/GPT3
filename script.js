@@ -9,23 +9,22 @@ form.addEventListener("submit", async (e) => {
     const question = questionInput.value;
 
     // Your GPT-3 API key
-    const apiKey = "PUT_YOUR_API_KEY_HERE";
+    const apiKey = "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";
     // Your GPT-3 model endpoint
-    const modelEndpoint = "PUT_YOUR_MODEL_ENDPOINT_HERE";
-    // API endpoint to generate responses
-    const apiUrl = `https://api.openai.com/v1/engines/${modelEndpoint}/completions`;
+    const apiUrl = "https://api.openai.com/v1/completions";
 
     // Data to send to the API
     const data = {
-        prompt: question,
-        api_key: apiKey,
+        model: "text-davinci-003",
+        prompt: question
     };
 
     try {
         const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization: Bearer "+String(apiKey)
             },
             body: JSON.stringify(data)
         });
@@ -36,6 +35,6 @@ form.addEventListener("submit", async (e) => {
         // Display the response text
         responseDiv.textContent = responseText;
     } catch (err) {
-        console.log(err);
+        document.write(err);
     }
 });
