@@ -1,4 +1,5 @@
 const questionInput = document.getElementById("question-input");
+const keyInput = document.getElementById("key-input");
 const form = document.getElementById("question-form");
 const responseDiv = document.getElementById("response");
 
@@ -7,9 +8,8 @@ form.addEventListener("submit", async (e) => {
 
     // The user's question
     const question = questionInput.value;
+    const apiKey = keyInput.value;
 
-    // Your GPT-3 API key
-    const apiKey = "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";
     // Your GPT-3 model endpoint
     const apiUrl = "https://api.openai.com/v1/completions";
 
